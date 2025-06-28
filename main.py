@@ -23,7 +23,7 @@ if os.path.exists(FILE_NAME):
 else:
     students = []
 
- @app.post("/register")
+@app.post("/register")
 def register(name: str = Form(...), roll: str = Form(...)):
     # Check for duplicate roll numbers
     for student in students:
